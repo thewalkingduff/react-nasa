@@ -48,7 +48,7 @@ const GifHooks = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <h1>NASA<span style={{ color: '#FFE62E' }}> ASTRONOMY PICTURE OF THE DAY</span> </h1>
 
             <div className='fav-gifs'>
@@ -58,7 +58,9 @@ const GifHooks = () => {
     return (
         <div key={index} className="single-fav-gif">
             {/* <img src={gif.images.fixed_width.url} alt=' ' /> */}
+            <h1>{gifs.title}</h1>
             <img src={gifs.url} alt=' ' />
+            <p>{gifs.explanation}</p>
             <button className="save-remove-button" onClick={() => handleRemoveGif(index)} >Remove</button>
         </div>
     )
@@ -74,7 +76,9 @@ const GifHooks = () => {
             <div className='searched-gifs'> 
         
                         <div className="single-search-gif">
+                            <h1>{gifs.title}</h1>
                             <img src={gifs.url} alt=''/>
+                            <p>{gifs.explanation}</p>
                             <button className="save-remove-button" onClick={() => handleSaveGif(gifs.url)}>Save</button>
                         </div>
      
